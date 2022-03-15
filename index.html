@@ -114,7 +114,18 @@
       )
   })();
 
-  document.querySelector("[contenteditable]").addEventListener("paste", function(e) {
+  document.getElementById("eng").addEventListener("paste", function(e) {
+  e.preventDefault();
+  if (e.clipboardData && e.clipboardData.getData) {
+    var text = e.clipboardData.getData("text/plain");
+    document.execCommand("insertHTML", false, text);
+  } else if (window.clipboardData && window.clipboardData.getData) {
+    var text = window.clipboardData.getData("Text");
+    insertTextAtCursor(text);
+  }
+});
+
+  document.getElementById("so").addEventListener("paste", function(e) {
   e.preventDefault();
   if (e.clipboardData && e.clipboardData.getData) {
     var text = e.clipboardData.getData("text/plain");
