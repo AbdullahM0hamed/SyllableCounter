@@ -17,7 +17,7 @@ a:focus, a:hover {
 }
 
 .so[contenteditable]:empty::before {
-    content: "Translated Text...";
+    content: "Somali Text...";
 }
 
 input[type=text], select, .input, span {
