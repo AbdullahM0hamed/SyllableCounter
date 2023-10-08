@@ -13,7 +13,7 @@ a:focus, a:hover {
 }
 
 .eng[contenteditable]:empty::before {
-    content: "Original Text..."
+    content: "English Text..."
 }
 
 .so[contenteditable]:empty::before {
